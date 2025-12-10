@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "808485784600",
+    "project_id": "abp-pgl",
+    "storage_bucket": "abp-pgl.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:808485784600:android:f1d3e5a348491a495e476d",
+        "android_client_info": {
+          "package_name": "com.example.pgl_ut3proyecto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVRdNgqmFv2FijwCjeg0dWhuUMYtoLhPs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
