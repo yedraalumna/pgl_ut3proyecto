@@ -66,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text('Municipios de GC'),
         actions: [
-          // BOTÓN DE RESTAURAR DATOS (Llama a table.dart)
+          //BOTÓN DE RESTAURAR DATOS (Llama a table.dart)
           IconButton(
             icon: const Icon(Icons.cloud_upload),
             tooltip: 'Restaurar Datos',
