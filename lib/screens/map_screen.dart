@@ -1,8 +1,8 @@
-//Pantalla del mapa
+//Pantalla del mapa vacío
 
 import 'package:flutter/material.dart';
-import 'package:flutter_map/flutter_map.dart';  //El motor del mapa
-import 'package:latlong2/latlong.dart';  //Para manejar coordenadas
+import 'package:flutter_map/flutter_map.dart'; //El motor del mapa
+import 'package:latlong2/latlong.dart'; //Para manejar coordenadas
 
 //StatelessWidget: Como un Fragment estático. No cambia una vez se dibuja.
 class MapScreen extends StatelessWidget {
@@ -23,16 +23,14 @@ class MapScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     //Scaffold es el esqueleto básico visual (Barra superior, cuerpo, botón flotante...), igual que en kotlin
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Mapa de $nombreMunicipio'),
-      ),
+      appBar: AppBar(title: Text('Mapa de $nombreMunicipio')),
 
       //El cuerpo es el mapa:
       body: FlutterMap(
         options: MapOptions(
           //Centramos el mapa en las coordenadas que recibimos de la bd
-          initialCenter: LatLng(latitud, longitud), 
-          initialZoom: 13.0,  //Nivel de zoom inicial (13 es nivel ciudad/pueblo)
+          initialCenter: LatLng(latitud, longitud),
+          initialZoom: 13.0, //Nivel de zoom inicial (13 es nivel ciudad/pueblo)
         ),
         children: [
           //Capa 1: Las imágenes del mapa (Tiles) de OpenStreetMap
@@ -41,7 +39,7 @@ class MapScreen extends StatelessWidget {
             //IMPORTANTE: Hay que cambiar esto por un ID único o se bloqueará el mapa
             userAgentPackageName: 'com.alumnadom.municipios_gc',
           ),
-          
+
           //Capa 2: El marcador (Pin) rojo
           MarkerLayer(
             markers: [
@@ -50,7 +48,7 @@ class MapScreen extends StatelessWidget {
                 width: 80,
                 height: 80,
                 child: const Icon(
-                  Icons.location_on,  //Icono de chincheta
+                  Icons.location_on, //Icono de chincheta
                   color: Colors.red,
                   size: 50,
                 ),
